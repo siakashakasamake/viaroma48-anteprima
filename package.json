@@ -1,0 +1,9 @@
+{
+  "name": "via-roma-48-menu",
+  "private": true,
+  "type": "module",
+  "description": "Menu digitale Via Roma 48 con Ilaria e ordini al tavolo (Netlify Functions + Netlify Blobs)",
+  "dependencies": {
+    "@netlify/blobs": "^11.1.1"
+  }
+}

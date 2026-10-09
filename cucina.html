@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%23111111%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2243%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2230%22%20font-weight%3D%22700%22%20fill%3D%22%23e2b93a%22%20text-anchor%3D%22middle%22%3E48%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#111111">
+<title>Cucina · Via Roma 48</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Manrope:wght@400;600;700;800&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --sea-950:#111111; --sea-900:#1c1a17; --sea-700:#4a3f22; --sea-200:#dccb9c; --sea-50:#f7f2e6;
+  --coral:#d4a514; --bg:#f5f0e8; --card:#fff; --ink:#1a1a1a; --ink-2:#4a4436; --muted:#7a7262; --line:#e6dfd0; --soft:#efe9dc;
+  --red:#dc2626; --red-50:#fef2f2; --amber:#f59e0b; --amber-50:#fffbeb; --amber-ink:#92400e; --green:#16a34a; --green-50:#ecfdf3;
+  --display:"Fraunces", Georgia, serif;
+  --body:"Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
+.tn{font-variant-numeric:tabular-nums}
+[hidden]{display:none!important}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--sea-950);color:#fff}
+.hin{max-width:1600px;margin:0 auto;padding:12px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+.brand small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.18em;color:var(--sea-200)}
+.brand b{font-family:var(--display);font-size:22px;letter-spacing:.08em}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;padding:5px 11px;border-radius:99px;background:rgba(255,255,255,.1)}
+.live i{width:9px;height:9px;border-radius:99px;background:#22c55e}
+.live.off i{background:var(--red);animation:blink 1s infinite}
+.tools{margin-left:auto;display:flex;align-items:center;gap:8px}
+.clock{font-size:24px;font-weight:700;margin-right:6px}
+.hbtn{height:42px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.12);font-size:13px;font-weight:700}
+.hbtn.warn{background:var(--coral);color:#111;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.55}}
+
+main{max-width:1600px;margin:0 auto;padding:18px}
+.cols{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:760px){.cols{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.colh{display:flex;align-items:center;gap:8px;padding:0 4px 10px}
+.colh h2{margin:0;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.colh .n{margin-left:auto;background:#fff;border:1px solid var(--line);border-radius:99px;padding:1px 11px;font-weight:800}
+.dot{width:10px;height:10px;border-radius:99px;display:inline-block}
+.stack{display:flex;flex-direction:column;gap:14px}
+.empty{border:2px dashed var(--line);border-radius:18px;padding:34px 10px;text-align:center;color:var(--muted);font-size:14px}
+
+.ord{background:var(--card);border-radius:18px;border:1px solid var(--line);overflow:hidden;box-shadow:0 1px 2px rgba(17,17,17,.05)}
+.ord.fresh{border:2px solid var(--red);animation:ring 1.4s ease-out infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(220,38,38,.5)}70%{box-shadow:0 0 0 14px rgba(220,38,38,0)}100%{box-shadow:0 0 0 0 rgba(220,38,38,0)}}
+.strip{display:flex;justify-content:space-between;align-items:center;padding:9px 16px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.s-new{background:var(--red-50);color:#b91c1c}.s-accepted{background:#1f2937;color:#fff}.s-preparing{background:var(--amber-50);color:var(--amber-ink)}.s-ready{background:var(--green-50);color:#15803d}
+.ob{padding:14px 16px 16px}
+.top{display:flex;justify-content:space-between;gap:12px}
+.rest{font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--muted)}
+.tav{font-size:32px;font-weight:800;letter-spacing:-.01em;line-height:1.05}
+.when{text-align:right}
+.when b{display:block;font-size:19px}
+.when small{font-size:12px;color:var(--muted)}
+.when small.late{color:var(--red);font-weight:800}
+.items{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.items li{display:flex;justify-content:space-between;gap:10px;font-size:17px;line-height:1.3}
+.items li b{font-weight:800}
+.items li .pr{font-size:15px;color:var(--muted);flex-shrink:0}
+.items .inote{margin:-2px 0 2px 28px;font-size:13.5px;font-style:italic;color:var(--amber-ink)}
+.note{margin-top:12px;background:var(--amber-50);border:1px solid #fde68a;border-radius:12px;padding:10px 12px;font-size:14.5px;color:#78350f}
+.note small{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--amber-ink);margin-bottom:2px}
+.tot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:10px;border-top:1px solid var(--soft)}
+.tot span{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--muted)}
+.tot b{font-size:22px}
+.act{width:100%;height:56px;margin-top:12px;border-radius:14px;color:#fff;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.act:disabled{opacity:.6}
+.a-new{background:var(--red)}.a-accepted{background:var(--amber)}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.reasons button{min-height:44px;border-radius:10px;background:#fff;border:1.5px solid var(--line);font-weight:700;font-size:13px}.reasons .rx{grid-column:1/-1;background:var(--soft,#eef3f5)}.a-preparing{background:var(--amber)}.a-ready{background:var(--green)}
+.cancel{width:100%;height:36px;margin-top:4px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cancel.ask{color:var(--red)}
+
+details{margin-top:24px}
+summary{cursor:pointer;font-weight:700;color:var(--ink-2);padding:6px 4px}
+.done{list-style:none;margin:8px 0 0;padding:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.done li{display:flex;flex-wrap:wrap;gap:4px 16px;padding:11px 16px;border-top:1px solid var(--soft);font-size:14px;align-items:center}
+.done li:first-child{border-top:0}
+.done .what{flex:1;min-width:180px;color:var(--ink-2)}
+.pill{font-size:12px;font-weight:800;padding:3px 10px;border-radius:99px;background:var(--soft);color:var(--ink-2)}
+.pill.x{background:var(--red-50);color:#b91c1c}
+
+.toasts{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 76px);transform:translateX(-50%);z-index:30;display:flex;flex-direction:column;gap:8px;width:min(92vw,460px);pointer-events:none}
+.toast{display:flex;gap:12px;align-items:center;background:var(--red);color:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 20px 40px -12px rgba(220,38,38,.6);animation:drop .35s cubic-bezier(.2,.9,.3,1.2) both}
+.toast.err{background:var(--sea-950)}
+.toast b{display:block}
+@keyframes drop{from{transform:translateY(-110%);opacity:0}to{transform:none;opacity:1}}
+
+.gate{min-height:100dvh;display:grid;place-items:center;padding:24px 16px;background:linear-gradient(160deg,var(--sea-950),var(--sea-700))}
+.gate form{width:100%;max-width:360px;background:#fff;border-radius:24px;padding:28px 24px;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.gate h1{margin:0;font-family:var(--display);font-size:28px;letter-spacing:.08em;color:var(--sea-950)}
+.gate p{color:var(--muted);margin:6px 0 20px}
+.gate input{width:100%;height:56px;border:1px solid var(--line);border-radius:14px;text-align:center;font-size:26px;letter-spacing:.4em;font-weight:800;background:var(--soft);outline:0}
+.gate input:focus{border-color:var(--sea-700);background:#fff}
+.gate button{width:100%;height:52px;margin-top:12px;border-radius:14px;background:var(--sea-900);color:#fff;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.gate .err{color:var(--red);font-weight:700;min-height:1.4em;margin:10px 0 0}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+.ord.to{box-shadow:0 0 0 3px var(--coral)}
+.ord.to .tav{color:var(--coral-700,#7d6300);font-size:22px;line-height:1.15}
+.cust{font-size:14px;font-weight:700;margin-top:3px;color:var(--ink-2)}
+.cust a{color:inherit}
+</style>
+</head>
+<body>
+
+<section class="gate" id="gate" hidden>
+  <form id="pinForm">
+    <h1>VIA ROMA 48</h1>
+    <p>Dashboard cucina · inserisci il PIN</p>
+    <label for="pin" hidden>PIN</label>
+    <input id="pin" inputmode="numeric" autocomplete="current-password" type="password" maxlength="12" required>
+    <button type="submit">Entra</button>
+    <p class="err" id="pinErr" role="alert"></p>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header>
+    <div class="hin">
+      <div class="brand"><small>DASHBOARD CUCINA</small><b>VIA ROMA 48</b></div>
+      <span class="live" id="live"><i></i><span id="liveTxt">Collegamento…</span></span>
+      <div class="tools">
+        <span class="clock tn" id="clock"></span>
+        <button class="hbtn warn" id="soundBtn">🔕 Attiva suono</button>
+        <button class="hbtn" id="logout" title="Esci">Esci</button>
+      </div>
+    </div>
+  </header>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <main>
+    <div class="cols" id="cols"></div>
+    <details id="doneBox"><summary id="doneSum">Completati</summary><ul class="done" id="doneList"></ul></details>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+var POLL_MS = 4000;
+var COLS = [
+  { s: "new", t: "Nuovi", c: "var(--red)" },
+  { s: "preparing", t: "In preparazione", c: "var(--amber)" },
+  { s: "ready", t: "Pronti", c: "var(--green)" }
+];
+var STRIP = { new: "🔴 Nuovo ordine", accepted: "Accettato dalla sala", preparing: "🟡 In preparazione", ready: "🟢 Pronto" };
+var NEXT = { new: ["preparing", "Prendi in carico"], accepted: ["preparing", "Inizia preparazione"], preparing: ["ready", "Ordine pronto"], ready: ["served", "Servito"] };
+var REASONS = ["Piatto esaurito", "Richiesto dal cliente", "Ordine doppio", "Errore di inserimento"];
+
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+function euro(n){ n = Math.round(Number(n) * 100) / 100; return Number.isInteger(n) ? "€" + n : "€" + n.toFixed(2).replace(".", ","); }
+function hhmm(iso){ return new Date(iso).toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" }); }
+function ls(k, v){ try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { return null; } }
+
+var PIN = ls("cv-kitchen-pin-via-roma-48") || "";
+var orders = {}, known = null, fresh = {}, busy = {}, askCancel = null, timer = null, failures = 0;
+
+// ---------- PIN ----------
+function showGate(msg){ $("app").hidden = true; $("gate").hidden = false; $("pinErr").textContent = msg || ""; $("pin").value = ""; $("pin").focus(); clearTimeout(timer); }
+$("pinForm").addEventListener("submit", function(e){ e.preventDefault(); PIN = $("pin").value.trim(); ls("cv-kitchen-pin-via-roma-48", PIN); start(); });
+$("logout").onclick = function(){ ls("cv-kitchen-pin-via-roma-48", null); PIN = ""; showGate(); };
+
+async function api(method, body){
+  var r = await fetch("/api/ordini", { method: method, cache: "no-store", headers: { "Content-Type": "application/json", "x-pin": PIN }, body: body ? JSON.stringify(body) : undefined });
+  var j = await r.json().catch(function(){ return {}; });
+  if (r.status === 401) { ls("cv-kitchen-pin-via-roma-48", null); showGate("PIN errato"); throw new Error("PIN errato"); }
+  if (!r.ok) { var er = new Error(j.error || "Errore " + r.status); if (j.order) er.order = j.order; throw er; }
+  return j;
+}
+
+function start(){
+  if (!PIN) return showGate();
+  $("gate").hidden = true; $("app").hidden = false;
+  known = null; poll();
+}
+
+// ---------- aggiornamento automatico ----------
+async function poll(){
+  clearTimeout(timer);
+  try {
+    var j = await api("GET");
+    failures = 0; setLive(true, j.now);
+    var arrived = [];
+    j.orders.forEach(function(o){
+      if (known && !known[o.id] && o.status === "new") { fresh[o.id] = true; arrived.push(o); }
+      if (!busy[o.id]) orders[o.id] = o;
+    });
+    // rimuove ordini non più restituiti (vecchi)
+    var ids = {}; j.orders.forEach(function(o){ ids[o.id] = 1; });
+    Object.keys(orders).forEach(function(id){ if (!ids[id]) delete orders[id]; });
+    known = known || {}; j.orders.forEach(function(o){ known[o.id] = 1; });
+    arrived.forEach(function(o){ toast("Nuovo ordine · " + (isTo(o) ? "Asporto ore " + (o.pickup ? o.pickup.time : "") : "Tavolo " + o.table), "#" + o.code + " · " + euro(o.total)); });
+    if (arrived.length) chime();
+    render();
+  } catch (e) {
+    if (String(e.message) === "PIN errato") return;
+    failures++; setLive(false);
+    if (failures === 1) toast("Collegamento assente", String(e.message || e), true);
+  }
+  if (!$("app").hidden) timer = setTimeout(poll, document.hidden ? POLL_MS * 2 : POLL_MS);
+}
+document.addEventListener("visibilitychange", function(){ if (!document.hidden && !$("app").hidden) poll(); });
+function setLive(ok, now){
+  $("live").classList.toggle("off", !ok);
+  $("liveTxt").textContent = ok ? "Aggiornato alle " + new Date(now || Date.now()).toLocaleTimeString("it-IT") : "Riconnessione…";
+}
+
+// ---------- disegno ----------
+function isTo(o){ return o.type === "asporto"; }
+function where(o){ return isTo(o) ? "🛍 ASPORTO · ritiro " + esc(o.pickup ? o.pickup.time : "") : "TAVOLO " + o.table; }
+function card(o){
+  var mins = Math.max(0, Math.floor((Date.now() - Date.parse(o.createdAt)) / 60000));
+  var late = ((o.status === "new" || o.status === "accepted") && mins >= 5) || (o.status === "preparing" && mins >= 20);
+  var n = NEXT[o.status]; if (n && isTo(o) && o.status === "ready") n = ["served", "Ritirato"];
+  var items = o.items.map(function(i){
+    return '<li><span><b class="tn">' + i.qty + " ×</b> " + esc(i.name) + '</span><span class="pr tn">' + euro(i.qty * i.price) + "</span></li>" + (i.note ? '<li class="inote">“' + esc(i.note) + "”</li>" : "");
+  }).join("");
+  return '<article class="ord' + (fresh[o.id] ? " fresh" : "") + (isTo(o) ? " to" : "") + '">' +
+    '<div class="strip s-' + o.status + '"><span>' + STRIP[o.status] + '</span><span class="tn">#' + esc(o.code) + "</span></div>" +
+    '<div class="ob"><div class="top"><div><div class="rest">VIA ROMA 48</div><div class="tav">' + where(o) + '</div>' + (isTo(o) && o.pickup ? '<div class="cust">' + esc(o.pickup.name) + (o.pickup.phone ? ' · <a href="tel:' + esc(o.pickup.phone.replace(/\s/g, "")) + '">' + esc(o.pickup.phone) + "</a>" : "") + (o.pickup.via === "whatsapp" ? " · via WhatsApp" : "") + "</div>" : "") + '</div><div class="when"><b class="tn">' + hhmm(o.createdAt) + '</b><small class="' + (late ? "late" : "") + '">' + (mins ? "da " + mins + " min" : "adesso") + "</small></div></div>" +
+    '<ul class="items">' + items + "</ul>" +
+    (o.note ? '<div class="note"><small>NOTE:</small>“' + esc(o.note) + "”</div>" : "") +
+    '<div class="tot"><span>TOTALE:</span><b class="tn">' + euro(o.total) + "</b></div>" +
+    (n ? '<button class="act a-' + o.status + '" data-go="' + o.id + '" data-to="' + n[0] + '"' + (busy[o.id] ? " disabled" : "") + ">" + (busy[o.id] ? "…" : n[1]) + "</button>" : "") +
+    (askCancel === o.id ? '<div class="reasons"><b style="grid-column:1/-1;font-size:13px">Perché annulli l\'ordine?</b>' + REASONS.map(function(r){ return '<button data-reason="' + esc(r) + '" data-oid="' + o.id + '">' + esc(r) + "</button>"; }).join("") + '<button data-reason="?" data-oid="' + o.id + '">Altro motivo…</button><button class="rx" data-noask="1">Non annullare</button></div>'
+      : '<button class="cancel" data-cancel="' + o.id + '">Annulla ordine</button>') +
+    "</div></article>";
+}
+function render(){
+  var list = Object.keys(orders).map(function(k){ return orders[k]; });
+  $("cols").innerHTML = COLS.map(function(c){
+    var l = list.filter(function(o){ return o.status === c.s || (c.s === "new" && o.status === "accepted"); }).sort(function(a, b){ return a.createdAt.localeCompare(b.createdAt); });
+    return '<section><div class="colh"><span class="dot" style="background:' + c.c + '"></span><h2 style="color:' + c.c + '">' + c.t + '</h2><span class="n tn">' + l.length + '</span></div><div class="stack">' +
+      (l.length ? l.map(card).join("") : '<p class="empty">Nessun ordine</p>') + "</div></section>";
+  }).join("");
+  var done = list.filter(function(o){ return o.status === "served" || o.status === "cancelled"; }).sort(function(a, b){ return b.updatedAt.localeCompare(a.updatedAt); });
+  $("doneSum").textContent = "Completati oggi (" + done.length + ")";
+  $("doneList").innerHTML = done.length ? done.map(function(o){
+    return '<li><b>' + (isTo(o) ? "Asporto · " + esc(o.pickup ? o.pickup.name : "") : "Tavolo " + o.table) + '</b><span class="tn" style="color:var(--muted)">#' + esc(o.code) + " · " + hhmm(o.createdAt) + '</span><span class="what">' + o.items.map(function(i){ return i.qty + "× " + esc(i.name); }).join(", ") + (o.cancelReason ? " · motivo: " + esc(o.cancelReason) : "") + '</span><span class="pill' + (o.status === "cancelled" ? " x" : "") + '">' + (o.status === "served" ? (isTo(o) ? "✓ Ritirato" : "✓ Servito") : "Annullato") + '</span><b class="tn">' + euro(o.total) + "</b></li>";
+  }).join("") : '<li style="color:var(--muted)">Ancora nessuno.</li>';
+  var nf = Object.keys(fresh).length;
+  document.title = nf ? "🔴 (" + nf + ") Nuovo ordine · Via Roma 48" : "Cucina · Via Roma 48";
+}
+
+$("cols").addEventListener("click", async function(e){
+  var b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.noask) { askCancel = null; render(); return; }
+  var id = b.dataset.go || b.dataset.cancel || b.dataset.oid, o = orders[id]; if (!o || busy[id]) return;
+  var to = b.dataset.to, reason = "";
+  if (b.dataset.cancel) { askCancel = id; render(); return; }
+  if (b.dataset.reason) {
+    reason = b.dataset.reason === "?" ? (prompt("Motivo dell'annullamento") || "").trim() : b.dataset.reason;
+    if (reason.length < 3) { toast("Annullamento non fatto", "Serve il motivo", true); return; }
+    to = "cancelled";
+  }
+  askCancel = null; busy[id] = true; delete fresh[id];
+  var prev = o.status; o.status = to; render();                     // aggiornamento immediato
+  try { var upd = await api("PATCH", { id: id, status: to, from: prev, reason: reason }); orders[id] = upd; }
+  catch (err) { o.status = prev; if (err.order) { orders[id] = err.order; toast("Già aggiornato", "Un altro dispositivo ha cambiato questo ordine", true); } else toast("Operazione non riuscita", String(err.message || err), true); }
+  delete busy[id]; render();
+});
+
+// ---------- avvisi e suono ----------
+function toast(t, s, err){
+  var el = document.createElement("div"); el.className = "toast" + (err ? " err" : ""); el.setAttribute("role", "status");
+  el.innerHTML = '<span style="font-size:24px">' + (err ? "⚠️" : "🛎️") + "</span><div><b>" + esc(t) + "</b><span>" + esc(s) + "</span></div>";
+  $("toasts").appendChild(el); setTimeout(function(){ el.remove(); }, err ? 5000 : 8000);
+}
+var ctx = null, soundOn = false;
+function beep(){
+  if (!ctx) return; var t0 = ctx.currentTime + .02;
+  [[880, 0], [1320, .16], [880, .55], [1320, .71]].forEach(function(n){
+    var o = ctx.createOscillator(), g = ctx.createGain(); o.type = "sine"; o.frequency.value = n[0];
+    g.gain.setValueAtTime(.0001, t0 + n[1]); g.gain.exponentialRampToValueAtTime(.35, t0 + n[1] + .02); g.gain.exponentialRampToValueAtTime(.0001, t0 + n[1] + .32);
+    o.connect(g).connect(ctx.destination); o.start(t0 + n[1]); o.stop(t0 + n[1] + .35);
+  });
+}
+function chime(){ if (soundOn && ctx) { if (ctx.state !== "running") ctx.resume().then(beep).catch(function(){}); else beep(); } }
+function setSound(on){ soundOn = on; $("soundBtn").textContent = on ? "🔔 Suono attivo" : "🔕 Attiva suono"; $("soundBtn").classList.toggle("warn", !on); ls("cv-sound-via-roma-48", on ? "1" : "0"); }
+$("soundBtn").onclick = function(){
+  if (soundOn) return setSound(false);
+  try { ctx = ctx || new (window.AudioContext || window.webkitAudioContext)(); ctx.resume(); } catch (e) { return; }
+  setSound(true); beep();
+};
+if (ls("cv-sound-via-roma-48") === "1") { // si riattiva al primo tocco sulla pagina
+  var unlock = function(){ try { ctx = ctx || new (window.AudioContext || window.webkitAudioContext)(); ctx.resume(); setSound(true); } catch (e) {} };
+  window.addEventListener("pointerdown", unlock, { once: true });
+}
+
+// ---------- orologio, schermo acceso ----------
+function tick(){ $("clock").textContent = new Date().toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" }); }
+tick(); setInterval(function(){ tick(); if (!$("app").hidden) render(); }, 20000);
+var lock = null;
+async function wake(){ try { if (navigator.wakeLock && document.visibilityState === "visible") lock = await navigator.wakeLock.request("screen"); } catch (e) {} }
+document.addEventListener("visibilitychange", wake); wake();
+
+start();
+})();
+</script>
+</body>
+</html>
